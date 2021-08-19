@@ -12,7 +12,7 @@ export class AppComponent {
   public getStarWarsAPI() {
     return this._http.get('https://swapi.dev/api/people/').subscribe((data) => {
       console.log(data);
-      this.characters = JSON.stringify(data);
+      this.characters = JSON.stringify(data, null, 4);
     });
   }
 }
